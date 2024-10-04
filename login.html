@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .modal-header, h4, .close {
+      background-color: hwb(34 2% 0% / 0.977);
+      color: white !important;
+      text-align: center;
+      font-size: 30px;
+    }
+    .modal-footer {
+      background-color:  hwb(34 2% 0% / 0.977);
+    }
+
+    #signUpBtn{
+      background-color:  hwb(15 3% 9% / 0.97);
+    }
+
+#myButton {
+  background-color:  hwb(35 3% 9% / 0.97);
+}
+
+    img {
+      border: 0px solid #51f50420;
+      border-radius: 4px;
+      padding: 5px;
+      width: 350px;
+    }
+    div.absolute {
+      position: absolute;
+      top: 280px;
+      right: 220px;
+      width: 850px;
+      height: 600px;
+      border: 3px solid hsla(29, 92%, 49%, 0.963);
+
+    }
+    /* Move the Login button to the right */
+    #myBtn {
+      float: left;
+      margin-left: 100px; /* Adjust this value as needed */
+      background-color: rgba(244, 112, 11, 0.954);
+      position: absolute;
+      top: 200px;
+      left: 0px;
+      color: white
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid mt-3">
+    <!-- <div class="row">
+    <div class="col p-1 bg-primary text-white">.col</div> -->
+      <!-- Navbar -->
+      <ul class="navbar-nav">
+          <!-- <li class="nav-item"> -->
+              <!-- <img id="top-left-image" src="Images/6.jpg" alt="Image6" width="500" height="68"> -->
+          
+            <!-- <a class="nav-link" href="#">Link 1</a> -->
+          <!-- </li> -->
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link" href="#">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a> -->
+          
+        </ul>
+
+        <br/> <br/> <br/><br/><br/>
+
+<div class="container">
+  <h2 style="color:hwb(12 2% 7%);"><b></b></h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-default btn-lg" id="myBtn">Click Here To Login</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock" id="myButton"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="password" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">
+              <span class="glyphicon glyphicon-off"></span> Login
+            </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Not a member?</p> <button id="signUpBtn" class="btn btn-primary">Sign Up</button> 
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br/> <br/> <br/>
+<div class="absolute">
+  <img src="1.jpg" alt="Social Value Image" style="width:850px">
+</div>
+
+<script>
+  $(document).ready(function(){
+    $("#myBtn").click(function(){
+      $("#myModal").modal();
+    });
+  });
+
+  document.getElementById("loginForm").addEventListener("submit", function(event){
+    event.preventDefault();
+  
+    window.location.href = "page3.html"; // Redirect after submission
+  });
+
+  document.getElementById("signUpBtn").addEventListener("click", function(event){
+    event.preventDefault();
+    window.location.href = "Signup.html"; // Redirect to the signup page
+  });
+
+</script>
+
+  </div>
+</body>
+</html>
